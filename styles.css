@@ -1,22 +1,60 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: aliceblue;
+  font-family: "Roboto", sans-serif;
+}
+
+a:hover {
+  opacity: 0.8;
+  color: darkmagenta;
 }
 
 .start {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: 50px;
+}
+
+.sahara {
+  position: relative;
+}
+
+.sahara > img {
+  height: 500px;
+}
+
+.desc {
+  position: absolute;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  color: #fff;
+  font-family: "Playfair Display";
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.background {
+  transform: skewY(-10deg);
+  background-color: #8e7ab5;
+  height: 620px;
+  width: 100%;
+  position: absolute;
+  top: -175px;
+  left: 0;
+  z-index: -1;
 }
 
 .par {
   display: flex;
   flex-direction: column;
   background-color: darkcyan;
+  align-self: center;
+  max-width: 600px;
 }
 
 .par > p {
-  font-size: 18px;
   font-family: "Courier New", Courier, monospace;
   overflow-wrap: break-word;
 }
@@ -28,6 +66,81 @@ body {
 
 .icons {
   align-self: flex-end;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.work {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 20px 20px;
+}
+
+.main > h1 {
+  margin-top: 50px;
   font-size: 32px;
-  padding: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.x {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: antiquewhite;
+  max-width: 400px;
+}
+
+.x > img {
+  object-fit: fill;
+  max-height: 250px;
+  max-width: 400px;
+}
+
+.intro > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro > p {
+  overflow-wrap: break-word;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: forestgreen;
+  margin: 50px;
+  padding: 50px;
+}
+
+.footer > img {
+  min-width: 600px;
+  min-height: 300px;
+}
+
+.info > h1 {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.info > p {
+  overflow-wrap: break-word;
+  font-size: 18px;
+}
+
+.contact {
+  font-size: 18px;
+}
+
+.ico {
+  font-size: 24px;
+  padding-top: 25px;
 }
