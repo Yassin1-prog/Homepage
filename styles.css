@@ -6,7 +6,7 @@ body {
 }
 
 a:hover {
-  opacity: 0.8;
+  opacity: 0.6;
   color: darkmagenta;
 }
 
@@ -25,7 +25,6 @@ a:hover {
 }
 
 .desc {
-  position: absolute;
   position: absolute;
   bottom: 0;
   left: 100px;
@@ -52,6 +51,11 @@ a:hover {
   background-color: darkcyan;
   align-self: center;
   max-width: 600px;
+}
+
+.par > img,
+.par > .desc {
+  display: none;
 }
 
 .par > p {
@@ -121,7 +125,7 @@ a:hover {
   padding: 50px;
 }
 
-.footer > img {
+.foot > img {
   min-width: 600px;
   min-height: 300px;
 }
@@ -143,4 +147,88 @@ a:hover {
 .ico {
   font-size: 24px;
   padding-top: 25px;
+}
+
+@media (636px <= width <= 1003px) {
+  .start {
+    padding: 50px;
+  }
+
+  .sahara {
+    display: none;
+  }
+
+  .par > img {
+    display: unset;
+    width: 300px;
+    height: 300px;
+    float: left;
+  }
+
+  .background {
+    top: -160px;
+    height: 800px;
+  }
+
+  .par {
+    display: inline-block;
+  }
+
+  .par > p {
+    min-width: 200px;
+  }
+
+  .work {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 20px 20px;
+  }
+
+  .foot > img {
+    object-fit: fill;
+    min-height: 100px;
+    min-width: 100px;
+  }
+}
+
+@media (320px <= width <= 635px) {
+  .start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+  }
+
+  .sahara > img {
+    object-fit: fill;
+    max-width: 320px;
+  }
+
+  .work {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 20px 20px;
+  }
+
+  .footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: forestgreen;
+    margin: 50px;
+    padding: 50px;
+  }
+
+  .foot > img {
+    width: clamp(200px, 300px, 400px);
+    min-height: auto;
+    min-width: auto;
+  }
 }
